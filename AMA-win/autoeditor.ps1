@@ -1,6 +1,7 @@
-Set-Location $PSScriptRoot
-
+Set-Location (get-item $PSScriptRoot ).parent.FullName
 git pull
+
+Set-Location $PSScriptRoot
 
 $filePath = ".\uselessFile.txt"
 
@@ -13,6 +14,8 @@ if ($status -contains "nothing to commit, working tree clean"){
 }
 $logs = Join-Path "$PSScriptRoot" ".\logs.txt"
 $status > $logs
+
+Set-Location (get-item $PSScriptRoot ).parent.FullName
 
 git add *
 git status
