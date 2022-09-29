@@ -16,3 +16,5 @@ git add *
 git status
 git commit -m "[AUTO] Periodical repo update" -S
 git push origin master
+
+Pause
