@@ -1,13 +1,10 @@
 #!/bin/bash
 
-cd pwd
-cd ..
+cd ${PWD}
 git pull
-cd pwd
 
-echo "New Line\n" >> ./uselessFile.txt
+echo "New Line\n" >> ./AMA-bash/uselessFile.txt
 
-cd ..
 git add *
 git status
 git commit -m "[AUTO] Periodical repo update AMAbash"
