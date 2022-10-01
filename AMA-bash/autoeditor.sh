@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd ${PWD}
+
+cd "$(dirname "$0")"
 git pull
 
 echo "New Line\n" >> ./AMA-bash/uselessFile.txt
