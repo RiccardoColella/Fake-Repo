@@ -1,1 +1,3 @@
 Line N. 1
+New Line\n
+New Line\n

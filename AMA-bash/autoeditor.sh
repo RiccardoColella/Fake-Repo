@@ -4,7 +4,7 @@
 cd "$(dirname "$0")"
 git pull
 
-echo "New Line\n" > ./AMA-bash/uselessFile.txt
+echo "New Line\n" >> ./uselessFile.txt
 
 git add *
 git status
