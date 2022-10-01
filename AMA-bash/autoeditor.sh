@@ -4,7 +4,7 @@
 cd "$(dirname "$0")"
 git pull
 
-echo "New Line\n" >> ./uselessFile.txt
+date  >> ./uselessFile.txt
 
 git add *
 git status
