@@ -6,9 +6,10 @@ Set-Location $PSScriptRoot
 $filePath = ".\uselessFile.txt"
 
 $status = (git status)
+$date = Get-Date -Format "dddd yyyy/MM/dd HH:mm:ss K"
 if ($status -contains "nothing to commit, working tree clean"){
     Write-Output "No changes in the repo. Creating mock modification."
-    Add-Content $filePath ("Line N. " + ([int]((Get-Item -Path $filePath | Get-Content -Tail 1) -replace '[^0-9]' , '') + 1))
+    Add-Content $filePath $date
 } else {
     Write-Output "Already some changes are present in the folder"
 }
