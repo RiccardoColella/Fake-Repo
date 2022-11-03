@@ -8,5 +8,5 @@ while ($true)
   $delta = If ($backOrForth) {1} Else {-1}
   [System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point(($pos.X + $delta), ($pos.Y + $delta))
   $backOrForth = -Not $backOrForth
-  Start-Sleep -Seconds 10
+  Start-Sleep -Milliseconds 200
 }

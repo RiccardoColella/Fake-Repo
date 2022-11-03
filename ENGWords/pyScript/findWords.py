@@ -1,17 +1,19 @@
 wordList = []
 
-needed_chars    = ['i', 'r', 'e']
-forbidden_chars = ['g', 'a', 't','n', 'd', 'x']
-chars_not_first = ['i']
-chars_not_second = ['r']
-chars_not_third = ['e']
+needed_chars    = []
+forbidden_chars = ['g', 'e', 'a', 'w', 'o', 'm', 's', 'c', 'p', 'i', 'd']
+chars_not_first = []
+chars_not_second = []
+chars_not_third = []
 chars_not_fourth = []
 chars_not_fifth = []
 first   = '?'
-second  = 'l'
-third   = 'i'
-fourth  = 'e'
-fifth   = 'r'
+second  = 'u'
+third   = 'r'
+fourth  = '?'
+fifth   = 't'
+
+finding_max_letters = False
 
 iFile = open('words_alpha.txt','r')
 for line in iFile:
@@ -78,6 +80,15 @@ def not_contains(word):
 
     return True
 
+def max_letters(word):
+    ref_string = ""
+    for char in word:
+        if char not in ref_string:
+            ref_string += char
+    if len(ref_string) < 5:
+        return False
+    return True
+
 filtered = wordList
 filtered = filter(filter_first, filtered)
 filtered = filter(filter_second, filtered)
@@ -91,6 +102,8 @@ filtered = filter(filter_not_fourth, filtered)
 filtered = filter(filter_not_fifth, filtered)
 filtered = filter(must_contain, filtered)
 filtered = filter(not_contains, filtered)
+if finding_max_letters:
+    filtered = filter(max_letters, filtered)
 
 print('The filtered words are:')
 for a in filtered:
