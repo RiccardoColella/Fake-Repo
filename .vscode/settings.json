@@ -1,0 +1,4 @@
+{
+    "python.languageServer": "Pylance",
+    "tts.deactivateTtsTestExplorer": true
+}
