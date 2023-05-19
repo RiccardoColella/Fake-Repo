@@ -8,5 +8,5 @@ date  >> ./uselessFile.txt
 
 git add *
 git status
-git commit -m "[AUTO] Periodical repo update AMAbash"
+git commit -m "[AUTO] Periodical repo update bash"
 git push origin master

@@ -20,5 +20,5 @@ Set-Location (get-item $PSScriptRoot ).parent.FullName
 
 git add *
 git status
-git commit -m "[AUTO] Periodical repo update AMA-win" -S
+git commit -m "[CHORE] Periodical repo update win" -S
 git push origin master
