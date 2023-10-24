@@ -6,5 +6,6 @@ $shell = New-Object -ComObject WScript.Shell
 while ($true)
 {
   $shell.SendKeys('^')
-  Start-Sleep -seconds 5
+  $shell.SendKeys('^')
+  Start-Sleep -seconds 55
 }
